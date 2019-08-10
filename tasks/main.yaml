@@ -1,1 +1,5 @@
 ---
+- apt:
+    name: ruby-ronn
+  remote_user: root
+  when: ansible_os_family == 'Debian'
