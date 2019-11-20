@@ -2,4 +2,9 @@
 - apt:
     name: ronn
   remote_user: root
-  when: ansible_os_family == 'Debian'
+  when: ansible_os_family == 'Debian' and ansible_distribution_release == 'buster'
+
+- apt:
+    name: ruby-ronn
+  remote_user: root
+  when: ansible_os_family == 'Debian' and ansible_distribution_release == 'stretch'
